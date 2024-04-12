@@ -1,0 +1,15 @@
+<div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+</div>
+<form>
+    <h3>Login Here</h3>
+    <div [formGroup]="form"> 
+        <label for="username">Username</label>
+        <input type="text" formControlName="username" name="username" placeholder="Email or Phone" id="username">
+        <label for="password">Password</label>
+        <input type="password" formControlName="password" name="password" required minlength="6" placeholder="Password" id="password">
+        <button (click)="login()" [disabled]="!form.valid">Log In</button>
+        {{form.valid}}
+    </div>
+</form>
