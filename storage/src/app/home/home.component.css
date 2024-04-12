@@ -1,0 +1,86 @@
+.display {
+    display: flex;
+    flex-direction: column;
+    /* Stack children vertically */
+    justify-content: center;
+    /* Center vertically */
+    align-items: center;
+    /* Center horizontally */
+    height: 70vh;
+    /* 70% of viewport height */
+    width: 70%;
+    /* 70% of viewport width */
+    margin: 10% auto;
+    /* Center horizontally */
+    overflow: hidden;
+}
+
+.heading {
+    align-self: center;
+    margin-bottom: 20px;
+    /* Add space below the heading */
+}
+
+h1 {
+    color: var(--secondary-color);
+    font-size: xx-large;
+}
+
+.table-container {
+    width: 100%;
+    border-radius: 30px;
+    background-color: var(--secondary-color);
+    /* Background color */
+    box-shadow: 1px 1px 4px 2px rgba(75, 8, 229, 0.366);
+    /* Optional shadow effect */
+    height: 100%;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 30px 30px 0px 0px;
+    overflow: hidden;
+    cursor: default;
+}
+
+thead
+{
+    background-color: var(--primary-color);
+    border-bottom: 1px solid #ddd;
+}
+th {
+    color: var(--shadow-color);
+    padding: 10px;
+    font-weight: bold;
+}
+
+tbody {
+    border-radius: 30px;
+    overflow: scroll;
+}
+
+
+td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+}
+
+tr:hover td{
+    background-color: var(--hover-color) !important;
+}
+
+.trash {
+    text-align: right;
+    padding-right: 10px;
+    cursor: pointer;
+    opacity: 0; 
+}
+
+tr:hover .trash {
+    opacity: 1; 
+}

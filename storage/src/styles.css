@@ -14,6 +14,7 @@ body {
     --secondary-color: #8B89E6;
     --accent-color: #e8e7fa;
     --shadow-color: #E8E8E8;
+    --hover-color: #7472e3;
 }
 
 button.primary {

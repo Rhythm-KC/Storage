@@ -1,11 +1,17 @@
-export interface FileDescriptor {
+export enum DescriptorType
+{
+    File,
+    Folder
+}
+export interface FileDescriptor{
     name: String,
     root_path: String,
     visited: Date,
+    type: DescriptorType
 }
 
 export interface FileTree{
-    folder_name: string
-    files: [FileDescriptor]
+    root: string,
+    descriptors:FileDescriptor[]
 }
 
