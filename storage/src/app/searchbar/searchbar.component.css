@@ -1,0 +1,21 @@
+.search-container input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 10px;
+    border-color: var(--primary-color);
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    outline: none; /* Removes the glow effect that browsers apply on focus */
+
+    
+}
+input::placeholder
+{
+    color: var(--accent-color);
+}
+
+input:focus
+{
+    background-color: var(--hover-color);
+}

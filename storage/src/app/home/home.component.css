@@ -84,3 +84,10 @@ tr:hover td{
 tr:hover .trash {
     opacity: 1; 
 }
+
+.app-searchbar
+{
+    width: 80%;
+    padding: 20px;
+    border-radius: 10px;
+}
