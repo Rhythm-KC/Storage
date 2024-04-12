@@ -14,8 +14,10 @@ export class HomeComponent implements OnInit{
     
   };
   ngOnInit(): void {
-     this.folderlist = this.fileService.get_root(); 
-     console.log("nginit")
+     this.fileService.get_root().subscribe({
+      next: data => this.folderlist = data,
+      error: err => console.log(err)
+     }); 
   }
   
 }

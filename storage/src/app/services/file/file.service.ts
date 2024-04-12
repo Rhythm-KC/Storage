@@ -1,47 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { FileDescriptor, FileTree, DescriptorType } from '../../descriptor';
+import { HttpClient } from '@angular/common/http';
 
+const url = "http://127.0.0.1:8080/home"
 @Injectable({
   providedIn: 'root'
 })
 export class FileService {
-  descriptors: FileDescriptor[] = [
-    {
-      name: 'File 1',
-      root_path: '/documents',
-      visited: new Date(),
-      type: DescriptorType.File
-    },
-    {
-      name: 'Folder 1',
-      root_path: '/documents',
-      visited: new Date(),
-      type: DescriptorType.Folder
-    },
-    {
-      name: 'File 2',
-      root_path: '/documents/folder1',
-      visited: new Date(),
-      type: DescriptorType.File
-    },
-    {
-      name: 'Folder 2',
-      root_path: '/documents/folder1',
-      visited: new Date(),
-      type: DescriptorType.Folder
-    }
-  ];
 
-  fileTree = {
-    root: '/documents',
-    descriptors: this.descriptors
-  };
+  constructor(private httpclient: HttpClient) { }
 
-
-  constructor() { }
-  get_root(): FileTree
+  get_root(): Observable<FileTree>
   {
-    return this.fileTree;
+    return this.httpclient.get<FileTree>(url)
   }
 }

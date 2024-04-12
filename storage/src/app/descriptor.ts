@@ -1,17 +1,17 @@
 export enum DescriptorType
 {
-    File,
-    Folder
+    File ="File",
+    Folder = "Folder"
 }
 export interface FileDescriptor{
-    name: String,
-    root_path: String,
-    visited: Date,
-    type: DescriptorType
+    Name: String,
+    Path: String,
+    Date: string,
+    Type: DescriptorType
 }
 
 export interface FileTree{
-    root: string,
-    descriptors:FileDescriptor[]
+    Root: string,
+    Descriptors:FileDescriptor[]
 }
 

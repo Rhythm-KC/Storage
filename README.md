@@ -10,16 +10,16 @@ It a personal file storage system. This is a personal project for fun. To learn 
 
 ## Features in progress
 
-### frontend	
+### frontend
 
 - [X] Have a user login page
 - [ ] manage access so not everyone can login
-- [ ] build a frontend to preview the Directory Tree (top level)
+- [X] build a frontend to preview the Directory Tree (top level)
 - [ ] Serve files to the user upon request.
 - [ ] add features to created folders, upload files and delete file and folders
 
 ## backed
 
-- [ ] Start working on backend.
+- [X] Start working on backend.
 - [ ] Use session token to manage authentication
 - [ ] Use S3 to store file in an organized manner.
