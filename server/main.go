@@ -64,11 +64,19 @@ func create_file_tree(dir_obj [] fs.DirEntry, path string) file_tree{
 
 
 func home(w http.ResponseWriter, r *http.Request ){
+	dir_param := r.URL.Query().Get("dir")
 	path := "/Public"
+	if dir_param != ""{
+		path = dir_param
+	}
 	tree := get_folder_tree(path)
 	file := create_file_tree(tree, path)
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+    w.Header().Set("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE")
+    w.Header().Set("Access-Control-Allow-Headers", "Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization")
 	json.NewEncoder(w).Encode(file)
 }
+
 
 func handle_request(){
 	http.HandleFunc("/home", home)

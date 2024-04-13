@@ -19,7 +19,7 @@
                 </thead>
                 <tbody>
                     <ng-container *ngFor="let descriptor of folderlist.Descriptors">
-                        <tr>
+                        <tr role="button" (click)="get_obj(descriptor)">
                             <td>
                                 <svg *ngIf="descriptor.Type === 'Folder'" xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 512 512">

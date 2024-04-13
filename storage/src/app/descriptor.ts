@@ -4,8 +4,8 @@ export enum DescriptorType
     Folder = "Folder"
 }
 export interface FileDescriptor{
-    Name: String,
-    Path: String,
+    Name: string,
+    Path: string,
     Date: string,
     Type: DescriptorType
 }
