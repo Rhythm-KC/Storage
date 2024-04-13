@@ -21,11 +21,6 @@
     /* Add space below the heading */
 }
 
-h1 {
-    color: var(--secondary-color);
-    font-size: xx-large;
-}
-
 .table-container {
     width: 100%;
     border-radius: 30px;
@@ -34,6 +29,35 @@ h1 {
     box-shadow: 1px 1px 4px 2px rgba(75, 8, 229, 0.366);
     /* Optional shadow effect */
     height: 100%;
+    overflow: auto;
+
+}
+
+.trash {
+    text-align: right;
+    padding-right: 10px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+tr:hover .trash {
+    opacity: 1;
+}
+
+.app-searchbar {
+    width: 80%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+table.scrolldown tbody {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+h1 {
+    color: var(--secondary-color);
+    font-size: xx-large;
 }
 
 
@@ -41,26 +65,22 @@ table {
     width: 100%;
     border-collapse: collapse;
     border-radius: 30px 30px 0px 0px;
-    overflow: hidden;
     cursor: default;
 }
 
-thead
-{
-    background-color: var(--primary-color);
-    border-bottom: 1px solid #ddd;
-}
 th {
-    color: var(--shadow-color);
     padding: 10px;
     font-weight: bold;
 }
 
-tbody {
-    border-radius: 30px;
-    overflow: scroll;
+thead th {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--primary-color);
+    border-bottom: 1px solid #ddd;
+    color: var(--shadow-color);
 }
-
 
 td {
     padding: 8px;
@@ -70,24 +90,7 @@ td {
     color: var(--accent-color);
 }
 
-tr:hover td{
+tr:hover td {
     background-color: var(--hover-color) !important;
 }
 
-.trash {
-    text-align: right;
-    padding-right: 10px;
-    cursor: pointer;
-    opacity: 0; 
-}
-
-tr:hover .trash {
-    opacity: 1; 
-}
-
-.app-searchbar
-{
-    width: 80%;
-    padding: 20px;
-    border-radius: 10px;
-}
