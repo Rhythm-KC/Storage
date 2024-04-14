@@ -9,13 +9,15 @@ import { HomeComponent } from './home/home.component'
 import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './services/auth.service';
 import { SearchbarComponent } from './searchbar/searchbar.component';
+import { FilepathComponent } from './home/filepath/filepath.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    SearchbarComponent
+    SearchbarComponent,
+    FilepathComponent
   ],
   imports: [
     HttpClientModule,

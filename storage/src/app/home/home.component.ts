@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit{
     }
   }
 
-  private get_dir(file_path: string): void{
+  get_dir(file_path: string): void{
       this.fileService.get_dir(file_path).subscribe(
         {
           next: data => {this.folderlist = data, console.log(this.folderlist)},

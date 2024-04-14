@@ -6,6 +6,9 @@
         <div class="app-searchbar">
             <app-searchbar></app-searchbar>
         </div>
+        <div class="filepath">
+            <app-filepath [filepath]="folderlist" (dirEventEmitter)="get_dir($event)"></app-filepath>
+        </div>
         <div class="table-container">
             <table class="scrolldown" *ngIf="folderlist">
                 <thead>

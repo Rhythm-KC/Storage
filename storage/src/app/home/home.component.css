@@ -40,6 +40,13 @@
     opacity: 0;
 }
 
+.filepath{
+    width: 100%;
+    padding: 10px;
+    font-size: x-large;
+    margin-left: 30px;
+}
+
 tr:hover .trash {
     opacity: 1;
 }
